@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Javascript Handson-4  <span>(Arrays)</span></h1>
+            <h2>Q1. (Find the Product.) Write a program that takes an array as input from the user and find out the product of the elements.</h2>
+            <h2><pre>Ans. Input:- 5
+            1 2 3 4 5 || Output :- 120
+
+                const Find_Prod = (array, N) => {
+                    let num=1;
+                    for(let i=0;i< N;i++){
+                      num = num * array[i];
+                    }
+                    return num;
+                  };
+            </pre></h2>
+            <h2>Q2. (Find the Sum.) Write a program which takes an array as input from the user and find out the sum of the array elements.</h2>
+            <h2><pre>Ans. Input :- 5
+            1 2 3 4 5 ||  Output :- 15
+            const Find_Sum = (array,N) => {
+                let sum=0;
+                for(let i=0;i< N;i++){
+                  sum = sum + array[i];
+                }
+                return sum;
+              };
+            </pre></h2>
+            <h2>Q3. (Count Occurrences) You are given an array 
+                A
+                 containing 
+                N
+                 integer elements and an integer 
+                K
+                , and your task is to return the count of occurrences of 
+                K
+                 in array 
+                A
+                .
+            </h2>
+            <h2><pre>Ans. Input :- 4 3
+            3 3 1 2  ||  Output :- 2
+            const findCount = (N, K, Arr) =>{
+                let sum=0;
+                for(let i=0;i< N;i++){
+                  if(Arr[i]==K){
+                    sum=sum+1
+                  }
+                }
+                if(sum>=0){
+                  return sum
+                }
+              };
+            </pre></h2>
+            <h2>Q4. (Even Odd)</h2>
+            <h2><pre>Ans. Input :- 7
+            1 2 3 4 5 6 7 ||  Output :- 16
+            
+            const findEvenOdd = (N, Arr) => {
+                var sum =0;
+                var sum2 =0;
+                var b =[];
+                for(var i=0;i< N;i++){
+                  if(Arr[i]%2===0){
+                    sum=sum+Arr[i]
+                  }else if(Arr[i]%2==1){
+                    sum2=sum2+Arr[i]
+                  }
+                }
+                b.push(sum)
+                b.push(sum2)
+                return  b;
+              };
+            </pre>
+            <h2>Q5. (Find whether the number is present or not)
+            </h2>
+            <h2><pre>Ans. Input :- 5
+            1 2 3 4 5
+            2  ||  Output :- 2  3   5   7   9
+
+            const Find_Num = (array,N,M) => {
+            let sum =0;
+            for(let i=0;i< N;i++){
+                if (M == array[i]){
+                sum=sum+1;
+                }
+            }
+            if(sum>0){
+                return 'YES';
+                }else{
+                return 'NO'
+                }
+            };             
+            </pre></h2>
+            <h2>Q6. (Higher Age) </h2>
+            <h2>
+            </h2>
+            <h2><pre>Ans. Input :- 6
+                11 23 3 45 72 68    ||  Output :-   23 45 72 68
+
+            const highAge = (N, Arr) => {
+                let arr=[];
+                for(let i=0;i< N;i++){
+                    if(Arr[i]>17){
+                        arr.push(Arr[i])
+                    }
+                }
+                return arr;
+                };
+            </pre></h2>
+            <h2>Q7. (Increment the Array Elements) You are provided an array of integers and you have to increment all array elements by 1 and then print whole array.</h2>
+            <h2><pre>Ans. Input :- 5
+                1 2 3 4 5||  Output :- 2 3 4 5 6 
+                
+        const Inc_Arr = (array,N) => {
+            let str=''
+            for(let i =0;i< N;i++){
+                str+=(array[i]+1+" ")
+            }
+            console.log(str);
+            };
+            </pre></h2>
+            <h2>Q8. (Pass or Fail) </h2>
+            <h2><pre>Ans. Input :- 7
+                13 89 45 98 67 45 54||  Output :- NO
+                
+                const isAllPass = (N, Arr) => {
+                    let sum='';
+                    for (let i = 0; i < N; i++) {
+                      if (Arr[i] >= 32) {
+                        sum=sum+1;
+                      }
+                    }
+                     if(sum.length==N){
+                        return 'YES';
+                      }else{
+                        return 'NO'
+                      }
+                  };
+            </pre></h2>
+            <h2>Q9. (Unique Color Shirt)</h2>
+            <h2><pre>Ans. Input :- 6
+                3 2 4 1 2 3     ||      Output:-  2
+
+                function Unique_Shirts (arr,N) {
+                    let sum = 0;
+                      for(i = 0; i < N; i++){
+                        for(j = 0; j < N; j++){
+                          if(arr[i] == arr[j] && i != j){
+                            break;
+                            }
+                          }
+                      if(j ==N ){
+                        sum++;
+                      }
+                    }
+                    return sum;
+                  }
+            </pre></h2>
+            <h2>Q10. (Min and Max) Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this.</h2>
+            <h2><pre>Ans. Input :- 6 3 1 4 6 2 7    ||      Output:-  17
+
+                function arrayMin(arr) {
+                    let min=arr[0]
+                    for(let i=0;i< arr.length;i++){
+                      if(arr[i]< min){
+                        min=arr[i];
+                      }
+                    }
+                    return min;
+                  }
+                  
+                  function arrayMax(arr) {
+                    let max=0
+                    for(let i=0;i< arr.length;i++){
+                      if(arr[i]>max){
+                        max=arr[i]
+                      }
+                    }
+                    return max;
+                  }
+            </pre></h2>
+            <h2>Q11. (Birthday Game)</h2>
+            <h2><pre>Ans. Input :- 5
+                2 2 1 3 2
+                4 2     ||      Output:-  2
+
+                function Birthday_Game(arr,D ,M) {
+                    let sum=0;
+                    let value=0;
+                   for(let i=0;i< arr.length-M+1;i++){
+                     sum=0;
+                     for(j=i;j< M+i;j++){
+                       sum=sum+arr[j]
+                     }
+                     if(sum==D){
+                       value++;
+                     }
+                   }
+                   return value;
+                  }
+            </pre></h2>
+        </div>
+</body>
+</html>
